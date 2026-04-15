@@ -1,0 +1,33 @@
+name: Build PDF
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Забираем код из репозитория
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Устанавливаем Typst (официальный экшен)
+      - name: Setup Typst
+        uses: typst/setup-typst@v3
+
+      # 3. Компилируем проект
+      # Мы указываем путь к main.typ и куда сохранить результат
+      - name: Compile
+        run: |
+          mkdir -p result
+          typst compile --root . typ/main.typ result/fha.pdf
+
+      # 4. Сохраняем готовый PDF в артефакты GitHub
+      # Его можно будет скачать во вкладке "Actions"
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: fha-notes
+          path: result/fha.pdf
