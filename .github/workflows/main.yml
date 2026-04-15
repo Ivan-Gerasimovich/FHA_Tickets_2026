@@ -15,7 +15,7 @@ jobs:
 
       # 2. Устанавливаем Typst (официальный экшен)
       - name: Setup Typst
-        uses: typst/setup-typst@v3
+        uses: chayleaf/setup-typst@v1
 
       # 3. Компилируем проект
       # Мы указываем путь к main.typ и куда сохранить результат
