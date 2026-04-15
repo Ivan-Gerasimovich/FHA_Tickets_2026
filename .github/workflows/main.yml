@@ -8,25 +8,25 @@ on:
 jobs:
   compile:
     runs-on: ubuntu-latest
+    # Используем официальный контейнер Typst напрямую. 
+    # Это надежнее, чем искать сторонние "setup" экшены.
+    container:
+      image: ghcr.io/typst/typst:latest
+
     steps:
-      # 1. Забираем код из репозитория
+      # 1. Забираем код
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 2. Устанавливаем Typst (официальный экшен)
-      - name: Setup Typst
-        uses: chayleaf/setup-typst@v1
-
-      # 3. Компилируем проект
-      # Мы указываем путь к main.typ и куда сохранить результат
-      - name: Compile
+      # 2. Компилируем
+      # Внутри этого контейнера команда 'typst' уже установлена.
+      - name: Compile PDF
         run: |
           mkdir -p result
-          # Мы указываем путь ОТ КОРНЯ репозитория
           typst compile --root . FHA/Typst/typ/main.typ result/fha.pdf
 
-      # 4. Сохраняем готовый PDF в артефакты GitHub
-      # Его можно будет скачать во вкладке "Actions"
+      # 3. Сохраняем результат
+      # Этот шаг выполняется уже на хосте, поэтому используем обычный экшен
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
