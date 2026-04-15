@@ -22,7 +22,8 @@ jobs:
       - name: Compile
         run: |
           mkdir -p result
-          typst compile --root . typ/main.typ result/fha.pdf
+          # Мы указываем путь ОТ КОРНЯ репозитория
+          typst compile --root . FHA/Typst/typ/main.typ result/fha.pdf
 
       # 4. Сохраняем готовый PDF в артефакты GitHub
       # Его можно будет скачать во вкладке "Actions"
