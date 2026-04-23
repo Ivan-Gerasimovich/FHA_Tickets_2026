@@ -24,3 +24,4 @@
 #include "chapters/10_lines_3d.typ"
 #include "chapters/11_line_plane_relative_pos.typ"
 #include "chapters/12_lines_relative_pos_3d.typ"
+#include "chapters/13_linear_spaces.typ"
