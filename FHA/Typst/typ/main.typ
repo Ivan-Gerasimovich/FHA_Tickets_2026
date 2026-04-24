@@ -1,7 +1,7 @@
 #import "conf.typ": *
 #show: setup
 
-
+#set text(size: 14pt)
 #align(center)[
   #text(20pt, weight: "bold")[Конспект по ОВА (II семестр)]
   #v(1em)
