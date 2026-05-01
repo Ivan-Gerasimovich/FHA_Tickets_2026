@@ -26,3 +26,5 @@
 #include "chapters/12_lines_relative_pos_3d.typ"
 #include "chapters/13_linear_spaces.typ"
 #include "chapters/14_basis_of_linear_space.typ"
+#include "chapters/15_dimension_and_subspace.typ"
+#include "chapters/16_linear_span.typ"
