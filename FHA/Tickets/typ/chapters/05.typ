@@ -22,34 +22,33 @@
 
 #proof[
   Пусть:
-  - $vec(O A) = a$
-  - $vec(O B) = b$
-  - $vec(O C) = c$
+  - $overline(O A) = a$
+  - $overline(O B) = b$
+  - $overline(O C) = c$
   - $V$ — объём параллелепипеда.
   - $S$ — площадь основания параллелепипеда.
   - $h$ — высота параллелепипеда.
 
-  $V = S h$
+  $V = S h$; 
   $S = |[a, b]|$
 
   Построим ортогональную проекцию вектора $c$ на прямую с направляющим вектором $[a, b]$.
   $h = |pr_([a, b]) (c)|$
   Из формулы проекции: $pr_x (y) = ((y, x) / (x, x)) x$.
-  Тогда $|pr_([a, b]) (c)| = | (([a, b], c) / ([a, b], [a, b])) [a, b] | = |[a, b]| dot | (a, b, c) | / |[a, b]|^2 = |(a, b, c)| / |[a, b]|$.
-  
-  Следовательно:
-  $V = |[a, b]| dot |(a, b, c)| / |[a, b]| = |(a, b, c)|$.
+
+  Тогда V = |[a,b]| $dot$ $|pr_([a, b]) (c)| = |[a,b]|dot | ((([a, b], c)) / (([a, b], [a, b]))) dot [a, b] | = |[a,b]|dot |((([a, b], c)) / (([a, b], [a, b])))| dot |[a, b]| = |[a, b]|^2 dot ( |(a, b, c)| ) / (|[a, b]| ^2) = |(a, b, c)|$
+
 ]
 
 #theorem(title: "О свойствах смешанного произведения")[
-  Для $forall$ векторов $a, b, c, d$ и любого $lambda in RR$:
-  + $(a, b, c) = 0 <=> a, b, c$ — компланарные векторы.
-    $(a, b, c) > 0 <=> a, b, c$ — правая тройка некомпланарных векторов.
-    $(a, b, c) < 0 <=> a, b, c$ — левая тройка некомпланарных векторов.
-  + Циклический сдвиг на 1 поз. вправо: 
-    $(a, b, c) = (c, a, b) = (b, c, a) = - (c, b, a) = - (a, c, b) = - (b, a, c)$.
-  + $(lambda a, b, c) = (a, lambda b, c) = (a, b, lambda c) = lambda (a, b, c)$.
-  + Линейность:
+  Для $forall$ векторов $a, b, c, d$ и любого $lambda in RR$: \
+  - а) $(a, b, c) = 0 <=> a, b, c$ — компланарные векторы.\
+    $(a, b, c) > 0 <=> a, b, c$ — правая тройка некомпланарных векторов.\
+    $(a, b, c) < 0 <=> a, b, c$ — левая тройка некомпланарных векторов. \
+  - б) Циклический сдвиг на 1 поз. вправо: \
+    $(a, b, c) = (c, a, b) = (b, c, a) = - (c, b, a) = - (a, c, b) = - (b, a, c)$. \
+  - в) $(lambda a, b, c) = (a, lambda b, c) = (a, b, lambda c) = lambda (a, b, c)$. \
+  - г) Линейность:
     - $(a + b, e, d) = (a, e, d) + (b, e, d)$
     - $(a, b + e, d) = (a, b, d) + (a, e, d)$
     - $(a, b, c + d) = (a, b, c) + (a, b, d)$ (без док-ва).
@@ -63,10 +62,10 @@
 ]
 
 #proof[
-  $(a, b, c) = ([a, b], c) = (mat(delim: "|", alpha_2, alpha_3; beta_2, beta_3) e_1 - mat(delim: "|", alpha_1, alpha_3; beta_1, beta_3) e_2 + mat(delim: "|", alpha_1, alpha_2; beta_1, beta_2) e_3, gamma_1 e_1 + gamma_2 e_2 + gamma_3 e_3) =$
-  $= mat(delim: "|", alpha_2, alpha_3; beta_2, beta_3) gamma_1 (e_1, e_1) - mat(delim: "|", alpha_1, alpha_3; beta_1, beta_3) gamma_2 (e_2, e_2) + mat(delim: "|", alpha_1, alpha_2; beta_1, beta_2) gamma_3 (e_3, e_3) + dots.c$
-  Так как базис ортонормированный, $(e_i, e_j) = 0$ при $i != j$ и $(e_i, e_i) = 1$.
-  $= gamma_1 mat(delim: "|", alpha_2, alpha_3; beta_2, beta_3) - gamma_2 mat(delim: "|", alpha_1, alpha_3; beta_1, beta_3) + gamma_3 mat(delim: "|", alpha_1, alpha_2; beta_1, beta_2) =$
+  $(a, b, c) = ([a, b], c) = (mat(delim: "|", alpha_2, alpha_3; beta_2, beta_3) e_1 - mat(delim: "|", alpha_1, alpha_3; beta_1, beta_3) e_2 + mat(delim: "|", alpha_1, alpha_2; beta_1, beta_2) e_3, gamma_1 e_1 + gamma_2 e_2 + gamma_3 e_3) $
+  $= mat(delim: "|", alpha_2, alpha_3; beta_2, beta_3) dot gamma_1 dot (e_1, e_1) - mat(delim: "|", alpha_1, alpha_3; beta_1, beta_3) dot gamma_2 dot (e_2, e_2) + mat(delim: "|", alpha_1, alpha_2; beta_1, beta_2) dot gamma_3 dot (e_3, e_3) $ \
+  Так как базис ортонормированный, то $(e_i, e_j) = 0$ при $i != j$ и $(e_i, e_i) = 1$. \
+  $=> gamma_1 mat(delim: "|", alpha_2, alpha_3; beta_2, beta_3) - gamma_2 mat(delim: "|", alpha_1, alpha_3; beta_1, beta_3) + gamma_3 mat(delim: "|", alpha_1, alpha_2; beta_1, beta_2) $
   $= mat(delim: "|", alpha_1, alpha_2, alpha_3; beta_1, beta_2, beta_3; gamma_1, gamma_2, gamma_3)$
-  (Разложение определителя по элементам третьей строки).
+  
 ]

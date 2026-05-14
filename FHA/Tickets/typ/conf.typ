@@ -34,7 +34,6 @@
 #let remark     = make-block("Замечание",   rgb("#6a1b9a"))
 #let axiom      = make-block("Аксиома",     rgb("#1565c0"))
 #let property   = make-block("Свойство",    rgb("#00695c"))
-
 // ============================================
 // Доказательство — особый блок: без нумерации, с квадратиком QED
 // ============================================
@@ -46,10 +45,10 @@
   stroke: (left: 2pt + rgb("#3e424b")),
   {
     let title-part = if title != none {[ (#emph(title))] } else {[] }
-    text(fill: rgb("#3e424b"), weight: "bold", style: "italic")[Доказательство#title-part.]
+    text(fill: rgb("#3e424b"), weight: "bold", style: "italic")[Доказательство \ $square.stroked$ #title-part]
     h(0.5em)
     body
-    [ #h(1fr) $square.stroked$ ]
+    [ #h(1fr) $square.filled$ ]
   }
 )
 
