@@ -1,33 +1,37 @@
 #import "../conf.typ": *
 
 = Линейное пространство над полем $P$ и его свойства.
-
+\
 Пусть $P$ — произвольное поле. \
-$alpha, beta, ..., alpha_1, alpha_2, ..., alpha_n$ — элементы поля $P$ (скаляры).
+$alpha, beta, ..., omega, alpha_1, alpha_2, ..., alpha_n$ — элементы поля $P$ (скаляры).
 
 Пусть $V$ — непустое множество. \
-$a, b, ..., x, y, z, a_1, a_2, ..., a_n, ...$ — элементы множ. $V$ (векторы).
+$a, b, c, ..., x, y, z, a_1, a_2, ..., a_n, ...$ — элементы множ. $V$ (векторы).
 
-Пусть на множ. $V$ задана бинарная алгебраическая операция сложения:
+Пусть на множ. $V$ задана бинарная алгебраическая операция $underline("сложения")$:
 $ (a, b) -> a + b in V $
 $ lambda in P, a in V -> lambda a in V $
 
 #definition[
-  Опр. Мн-во $V$ со сложением и умножением на элементы поля $P$, называется *линейным пространством над полем* $P$, если выполнены следующие условия (аксиомы):
+   Мн-во $V$ со сложением и умножением на элементы поля $P$, называется *линейным пространством над полем* $P$, если выполнены следующие условия (аксиомы):
 
-  1. $(V, +)$ — абелева группа (нейтр. эл. $0_V$)
-  2. $forall a in V quad 1 dot a = a$
-  3. $forall alpha in P forall beta in P forall a in V quad (alpha dot beta) dot a = alpha(beta a)$
-  4. $forall alpha in P forall beta in P forall a in V quad (alpha + beta)a = alpha a + beta a$
-  5. $forall alpha in P forall a in V forall b in V quad alpha(a + b) = alpha a + alpha b$
+  1$degree.$ $(V, +)$ — абелева группа \
+  
+  2$degree.$ $forall a in V quad 1 dot a = a"  "$ (1 - нейтральный элемент по умнож.)\
+
+  3$degree.$ $forall alpha in P " " forall beta in P " "forall a in V quad (alpha dot beta) dot a = alpha(beta a)$ \
+
+  4$degree.$ $forall alpha in P " " forall beta in P " "forall a in V quad (alpha + beta)a = alpha a + beta a$ \
+
+  5$degree.$ $forall alpha in P " " forall a in V  " "forall b in V quad alpha(a + b) = alpha a + alpha b$
 ]
 
-== Примеры линейного пространства?
+// TODO: примеры линейного пространства (1-4)
 
 == Свойства линейного пространства $V$ над полем $P$
 
 #property[
-  В л.пр-ве $V$ есть единственный нулевой вектор $0_V$ (нейтр. эл. множ-ва $V$ по сложению).
+  В пр-ве $V$ есть единственный нулевой вектор $0_V$ (нейтр. эл. множ-ва $V$ по сложению).
 ]
 
 #property[
@@ -35,7 +39,7 @@ $ lambda in P, a in V -> lambda a in V $
 ]
 
 #property[
-  $forall a in V quad 0 dot a = 0_V$
+  $forall a in V quad underbrace(0, (in "" P)) dot a = 0_V$
 ]
 
 #proof[
@@ -56,8 +60,8 @@ $ lambda in P, a in V -> lambda a in V $
 ]
 
 #proof[
-  $ alpha dot 0_V = alpha(overbrace(a, 1 dot a) + overbrace((-a), (-1) dot a)) = alpha [(1 + (-1)) dot a] = \ 
-  = alpha(underbrace(0, beta) dot a) limits(=)^"акс. 3" (overbrace(alpha beta, 0)) a = 0 dot a = 0_V $
+  $ alpha dot 0_V = alpha(overbrace(a, 1 dot a) + overbrace((-a), (-1) dot a)) = alpha ((1 + (-1)) dot a) = alpha((1 + (-1))*a) = \ 
+  = alpha(underbrace(0, beta) dot a) limits(=)^"акс. 3" [alpha * (beta  a) = (alpha beta) * a] = 0 dot a = 0_V $
 ]
 
 #property[
