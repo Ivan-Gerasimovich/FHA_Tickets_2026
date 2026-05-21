@@ -1,7 +1,6 @@
 #import "conf.typ": *
 
 #show: setup 
-#set text(size: 11.5pt)
 
 #align(center)[
   #text(20pt, weight: "bold")[Вопросы по ОВА (II семестр)]

@@ -58,9 +58,9 @@
 // Базовая настройка документа и красота
 // ============================================
 #let setup(body) = {
-  set text(lang: "ru", size: 11pt) 
+  set text(lang: "ru", size: 11.5pt) 
   set par(leading: 0.8em, justify: true) 
-  set page(numbering: "1")
+  set page(numbering: "1", paper: "a4")
   set math.equation(numbering: "(1)", supplement: none)
 
   // Умная нумерация: H1 получает цифру (для билетов), H2 и ниже — без цифр.
