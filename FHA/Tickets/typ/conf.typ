@@ -33,8 +33,17 @@
 #let corollary  = make-block("Следствие",   rgb("#e65100"))
 #let remark     = make-block("Замечание",   rgb("#6a1b9a"))
 #let axiom      = make-block("Аксиома",     rgb("#1565c0"))
-#let property   = make-block("Свойство",    rgb("#00695c"))
+#let circled(body) = {
+  box(circle(radius: 10pt, stroke: 1pt + black, inset: 0pt)[
+    #set align(center + horizon)
+    #body
+  ])
+}
+#let property   = make-block("",    rgb("#00695c"))
+
 #let formula    = make-block("",           rgb("#c500fb"))
+
+
 // ============================================
 // Доказательство — особый блок: без нумерации, с квадратиком QED
 // ============================================
