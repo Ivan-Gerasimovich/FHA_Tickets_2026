@@ -51,9 +51,13 @@ $ mat(delim: "|", x - x_0, y - y_0, z - z_0; a_1, a_2, a_3; b_1, b_2, b_3) = 0$ 
 
 $ (x - x_0) underbrace(mat(delim: "|", a_2, a_3; b_2, b_3), A) + (y - y_0) underbrace((- mat(delim: "|", a_1, a_3; b_1, b_3)), B) + (z - z_0) underbrace(mat(delim: "|", a_1, a_2; b_1, b_2), C) = 0 $
 
-$ (x - x_0)A + (y - y_0)B + (z - z_0)C = 0 $
+$
+  (x - x_0)A + (y - y_0)B + (z - z_0)C &= 0 \
+  A x + B y + C z + underbrace(-A x_0 - B y_0 - C z_0, D #text(size: 0.8em)[(число)]) &= 0
+$
 
-$ A x + B y + C z + underbrace((-A x_0 - B y_0 - C z_0), #stack(dir: ttb, text(size: 0.7em)[число], $D$)) = 0 $
+
+
 
 #formula()[$A x + B y + C z + D = 0 $ — *общее уравнение плоскости*.]
 
