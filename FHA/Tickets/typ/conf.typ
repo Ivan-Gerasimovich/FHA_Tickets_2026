@@ -3,20 +3,25 @@
 // ============================================
 // Фабрика нумерованных блоков (нативная, без figure)
 // ============================================
-#let make-block(name, color) = (title: none, body) => {
+#let make-block(name, color, counter-name: none) = (title: none, body) => {
+  // Если counter-name не задан явно, используем имя блока (name).
+  let cnt-name = if counter-name != none { counter-name } else { name }
+  
   block(
     width: 100%,
     breakable: true,
     stroke: (left: 3pt + color),
     inset: (left: 12pt, y: 6pt),
     {
-      counter(name).step() // Шаг счетчика блока
+      counter(cnt-name).step() // Шаг уникального счетчика блока
       context {
-        let loc = counter(name).get().first()
+        let loc = counter(cnt-name).get().first()
         let title-part = if title != none { [ (#emph(title))] } else {[] }
         
-        // Пишем просто "Теорема 1", "Лемма 2" и т.д.
-        text(fill: color, weight: "bold")[#name #loc#title-part.]
+        // Если name пустое (например, у формулы), выводится только номер. 
+        // Иначе пишется: "Имя Номер"
+        let label-text = if name != "" { [#name #loc] } else { [#loc] }
+        text(fill: color, weight: "bold")[#label-text#title-part.]
       }
       h(0.5em)
       body
@@ -33,16 +38,14 @@
 #let corollary  = make-block("Следствие",   rgb("#e65100"))
 #let remark     = make-block("Замечание",   rgb("#6a1b9a"))
 #let axiom      = make-block("Аксиома",     rgb("#1565c0"))
+#let property   = make-block("Свойство",    rgb("#00695c"))
+#let formula    = make-block("",            rgb("#c500fb"), counter-name: "Формула")
 #let circled(body) = {
   box(circle(radius: 10pt, stroke: 1pt + black, inset: 0pt)[
     #set align(center + horizon)
     #body
   ])
 }
-#let property=make-block("",rgb("#00695c"))
-
-#let formula=make-block("",rgb("#c500fb"))
-
 
 // ============================================
 // Доказательство — особый блок: без нумерации, с квадратиком QED
@@ -96,9 +99,10 @@
     pagebreak(weak: true) 
     
     // Сброс счетчиков
-    for k in ("Теорема", "Определение", "Лемма", "Следствие", "Замечание", "Аксиома", "Свойство") {
+    for k in ("Теорема", "Определение", "Лемма", "Следствие", "Замечание", "Аксиома", "Свойство", "Формула") {
       counter(k).update(0)
     }
+    
     counter(math.equation).update(0)
 
     // Логика исключений: проверяем, включена ли нумерация у этого H1
