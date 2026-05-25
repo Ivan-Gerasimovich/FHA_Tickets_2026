@@ -17,11 +17,12 @@
   
   $4^circle.$ $forall x in V quad (x, x) >= 0 and [(x, x) = 0 <=> x = 0_V]$
 ]
+\
 
 Пусть $V$ — евклидово пространство, то есть линейное пр-во над полем действительных чисел $RR$ со скалярным произведением.
 
 #definition[
-  Длиной вектора $x in V$ наз-ся число $|x| = sqrt((x, x))$.
+  *Длиной вектора* $x in V$ наз-ся число *$|x| = sqrt((x, x))$*.
 ]
 
 #theorem(title: "Коши-Буняковского")[
@@ -48,19 +49,26 @@
 ]
 
 #proof[
-  1) $ (x, y) <= |x| dot |y| quad | : overbrace((|x| dot |y|), > 0) $
+  1) $(x, y) <= |x| dot |y| quad | : (overbrace(|x|, >= 0) dot overbrace(|y|, >=0))$ \
      $ (x, y) / (|x| dot |y|) <= 1. $
 
-  2) $ (-x, y) <= underbrace(|-x|, "док-ть! " |x|) dot |y| $
-     $ -1 dot (x, y) <= |x| dot |y| quad | : underbrace((-|x| dot |y|), < 0) $
+  2) $(-x, y) <= underbrace(|-x|, "док-ть! " |x|) dot |y| $ \
+
+     $-1 dot (x, y) <= |x| dot |y| quad | : underbrace((-|x| dot |y|), < 0) $
      $ (x, y) / (|x| dot |y|) >= -1 $
 ]
 
+// TODo: доказать |-x|
+
+
 #definition[
-  Углом между ненулевыми векторами $x in V, y in V$ наз-ся число $phi in [0; pi]$ такое, что:
-  $ cos phi = (x, y) / (|x| dot |y|) $
+  *Углом* между ненулевыми векторами $x in V, y in V$ наз-ся число $phi in [0; pi]$ такое, что:
+  *$ cos phi = (x, y) / (|x| dot |y|) $*
 ]
 
 #definition[
-  Векторы $x in V, y in V$ наз-ся ортогональными, если $(x, y) = 0$.
+  Векторы $x in V, y in V$ наз-ся *ортогональными*, если $(x, y) = 0$.
 ]
+
+
+// TODO: расстояние? ортонормированный базис?
