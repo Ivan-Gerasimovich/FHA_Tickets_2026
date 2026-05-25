@@ -39,9 +39,9 @@
     #body
   ])
 }
-#let property   = make-block("",    rgb("#00695c"))
+#let property=make-block("",rgb("#00695c"))
 
-#let formula    = make-block("",           rgb("#c500fb"))
+#let formula=make-block("",rgb("#c500fb"))
 
 
 // ============================================
@@ -104,7 +104,7 @@
     // Логика исключений: проверяем, включена ли нумерация у этого H1
     let is-ticket = it.numbering != none 
     let prefix = if is-ticket {
-      [Билет #counter(heading).display() ] // Добавляем слово "Билет N. "
+      [Вопрос #counter(heading).display() ] // Добавляем слово "Билет N. "
     } else {
       none // Для исключений ничего не добавляем
     }
