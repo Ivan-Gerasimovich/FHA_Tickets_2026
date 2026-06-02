@@ -58,10 +58,10 @@
   
    $underbrace((x_1 - alpha_(1 n) / alpha_(k n) x_k, quad x_2 - alpha_(2 n) / alpha_(k n) x_k, quad ..., quad x_(k-1) - alpha_((k-1) n) / alpha_(k n) x_k), "линейно независимые k-1  векторов")$ - \ 
 
-   "-" линейно выражаются через векторы $e_1, e_2, ..., e_(n-1)$. \
+   линейно выражаются через векторы $e_1, e_2, ..., e_(n-1)$. \
 
   Остается показать, что они линейно независимы. \
-  $underline("По индукт. предполож.")$ $k-1 <= n-1 -> k <= n ->$ доказали K $<=$ n.
+  $underline("По индукт. предполож.")$ $k-1 <= n-1 -> k <= n ->$ доказали $k$ $<=$ n.
 
   $ overbrace(lambda_1, =0) (x_1 - alpha_(1 n) / alpha_(k n) x_k) + overbrace(lambda_2, =0) (x_2 - alpha_(2 n) / alpha_(k n) x_k) + ... + overbrace(lambda_(k-1), =0) (x_(k-1) - alpha_((k-1) n) / alpha_(k n) x_k) = 0_V $
 

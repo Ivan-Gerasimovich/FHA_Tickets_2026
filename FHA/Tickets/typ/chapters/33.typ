@@ -1,7 +1,7 @@
 #import "../conf.typ": *
 
 = Связь между матрицами линейного оператора в разных базисах. Подобные матрицы и их свойства.
-
+ \
 Пусть $V$ — линейное пространство над $P$.
 - $e_1, e_2, ..., e_n$ — базис пространства $V$
 - $e'_1, e'_2, ..., e'_n$ — базис пространства $V$
@@ -16,7 +16,7 @@ $f(x) in V, beta = (beta_1, beta_2, ..., beta_n)^T$ — координатный
 $beta' = (beta'_1, beta'_2, ..., beta'_n)^T$ — координатный столбец вектора $f(x)$ в базисе $e'_1, e'_2, ..., e'_n$.
 
 Тогда:
-$ alpha = T dot alpha' $
+$ alpha = T dot alpha' | dot A => underbrace(A alpha, beta) = A dot T dot alpha^'  $
 $ beta = T dot beta' $
 
 $ beta = A dot alpha $
@@ -24,17 +24,19 @@ $ beta' = A' dot alpha' $
 
 Выведем связь между матрицами:
 $ A dot alpha = A dot T dot alpha' $
-$ beta = A dot T dot alpha' $
+$ underbrace(beta, T dot beta^') = A dot T dot alpha' $
 $ T dot beta' = A dot T dot alpha' quad | dot T^(-1) $
-$ beta' = T^(-1) dot A dot T dot alpha' $
+$ underbrace(beta', A^' dot alpha^') = T^(-1) dot A dot T dot alpha' $
 $ A' dot alpha' = T^(-1) dot A dot T dot alpha' quad forall alpha' in P^n $
 
 Пусть поочередно координатный столбец принимает значения:
-$ alpha'_1 = vec(1, 0, dots, 0)^T, quad dots, quad alpha'_n = vec(0, 0, dots, 1)^T $
+$ alpha'_1 = (1, 0, dots, 0)^T, quad dots, quad alpha'_n = (0, 0, dots, 1)^T $
 
 Тогда:
-$ A'_1 = (T^(-1) dot A dot T)_1, quad ... , quad A'_n = (T^(-1) dot A dot T)_n => A' = T^(-1) dot A dot T $
-
+$ A'_1 = (T^(-1) dot A dot T)_1, quad ... , quad A'_n = (T^(-1) dot A dot T)_n => $\ 
+#set align(center)
+#rect(stroke: 1.5pt + rgb("2196F3"), inset: 10pt)[$A' = T^(-1) dot A dot T$] 
+#set align(left)
 
 #definition[
   Матрица $B in P^(n,n)$ *подобна* матрице $A in P^(n,n)$, если найдется обратимая матрица $T in P^(n,n)$ такая, что:
@@ -45,47 +47,43 @@ $ A'_1 = (T^(-1) dot A dot T)_1, quad ... , quad A'_n = (T^(-1) dot A dot T)_n =
 
 #property[
   1. Любая матрица $A in P^(n,n)$ подобна $A$.
-  #proof[
-    $ A = E_n^(-1) dot A dot E_n $
-  ]
+  $A = E_n^(-1) dot A dot E_n$
 ]
 
 #property[
-  2. Если $A in P^(n,n)$ подобна $B in P^(n,n)$, то $B$ подобна $A$.
-  #proof[
-    Дано: $A = T^(-1) dot B dot T$. \
-    Умножим обе части равенства слева на $T$:
-    $ T dot A = B dot T $
-    Умножим полученное равенство справа на $T^(-1)$:
+   Если $A in P^(n,n)$ подобна $B in P^(n,n)$, то $B$ подобна $A$.
+]
+#proof[
+    $ A = T^(-1) dot B dot T | dot T   \ T dot A = B dot T | dot T^(-1) $
     $ T dot A dot T^(-1) = B $
     Отсюда:
     $ B = (T^(-1))^(-1) dot A dot T^(-1) $
     Обозначим $S = T^(-1)$, тогда:
     $ B = S^(-1) dot A dot S $
   ]
-]
 
 #property[
   3. Если $A in P^(n,n)$ подобна $B in P^(n,n)$, а $B$ подобна $C in P^(n,n)$, то $A$ подобна $C$.
-  #proof[
-    Дано: $A = T^(-1) dot B dot T$ и $B = S^(-1) dot C dot S$. \
+]
+
+#proof[ \
+    $A = T^(-1) dot B dot T$, $B = S^(-1) dot C dot S$. \
     Положим $Q = S dot T$. Тогда:
-    $ Q^(-1) dot C dot Q = (S dot T)^(-1) dot C dot (S dot T) = T^(-1) dot (S^(-1) dot C dot S) dot T = T^(-1) dot B dot T = A $
+    $ Q^(-1) dot C dot Q = underbrace((S dot T)^(-1), T^(-1) dot S ^ (-1)) dot C dot (S dot T) = T^(-1) dot (S^(-1) dot C dot S) dot T = T^(-1) dot B dot T = A $
     Следовательно, $A = Q^(-1) dot C dot Q$.
   ]
-]
 
 #property[
   4. Определители подобных матриц равны.
+]
   #proof[
     Пусть $A, B in P^(n,n)$ и $A ~ B <=> exists T (|T| != 0 and B = T^(-1) A T)$. \
     Тогда:
     $ |B| = |T^(-1) dot A dot T| $
     Так как $|X dot Y| = |X| dot |Y|$:
     $ |B| = |T^(-1)| dot |A| dot |T| $
-    Так как $|T^(-1)| = 1 / |T|$:
-    $ |B| = 1 / |T| dot |A| dot |T| $
+    Так как $|T^(-1)| = 1 / (|T|)$:
+    $ |B| = 1 / (|T|) dot |A| dot |T| $
     Следовательно:
-    $ |B| = |A| dot |T| / |T| = |A| $
+    $ |B| = |A| $
   ]
-]

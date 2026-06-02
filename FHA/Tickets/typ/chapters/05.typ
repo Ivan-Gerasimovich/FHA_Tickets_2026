@@ -50,8 +50,8 @@
     $(a, b, c) = (c, a, b) = (b, c, a) = - (c, b, a) = - (a, c, b) = - (b, a, c)$. \
   - в) $(lambda a, b, c) = (a, lambda b, c) = (a, b, lambda c) = lambda (a, b, c)$. \
   - г) Линейность:
-    - $(a + b, e, d) = (a, e, d) + (b, e, d)$
-    - $(a, b + e, d) = (a, b, d) + (a, e, d)$
+    - $(a + b, c, d) = (a, c, d) + (b, c, d)$
+    - $(a, b + c, d) = (a, b, d) + (a, c, d)$
     - $(a, b, c + d) = (a, b, c) + (a, b, d)$ (без док-ва).
 ]
 

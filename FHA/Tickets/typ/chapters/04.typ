@@ -5,7 +5,7 @@
 #definition[
   #set enum(numbering: "1.1)", full: true)
   Векторным произведением векторов $a$ и $b$ называется вектор $c$, который обозначается $[a, b]$ и удовлетворяет следующим условиям:
-  + $a = 0$ or $b = 0 -> c = 0$.
+  + $a = 0$ $or$ $b = 0 -> c = 0$.
   + Если $a != 0$ и $b != 0$, то:
     + $|c| = |a| dot |b| dot sin phi$, где $phi$ — угол между векторами $a$ и $b$.
     + $c$ ортогонален $a, b$ ($c perp a$ and $c perp b$).
@@ -77,7 +77,8 @@
 ]
 
 #theorem[
-  Пусть $(e_1, e_2, e_3)$ — ортонормированный базис в трехмерном пространстве.
+  Пусть $(e_1, e_2, e_3)$ — ортонормированный базис в трехмерном пространстве. \ 
+  
   $vec(alpha_1, alpha_2, alpha_3)$ — коорд. вектора $a$ в базисе,
   $vec(beta_1, beta_2, beta_3)$ — коорд. вектора $b$,
   $vec(gamma_1, gamma_2, gamma_3)$ — коорд. вектора $[a, b]$.
@@ -112,7 +113,7 @@
   $ alpha_1 beta_2 e_3 - alpha_1 beta_3 e_2 - alpha_2 beta_1 e_3 + alpha_2 beta_3 e_1 + alpha_3 beta_1 e_2 - alpha_3 beta_2 e_1 =$ 
   $ (alpha_2 beta_3 - alpha_3 beta_2) e_1 - (alpha_1 beta_3 - alpha_3 beta_1) e_2 + (alpha_1 beta_2 - alpha_2 beta_1) e_3 =$ [определитель матрицы 2x2]
   $= mat(delim: "|", alpha_2, alpha_3; beta_2, beta_3) e_1 - mat(delim: "|", alpha_1, alpha_3; beta_1, beta_3) e_2 + mat(delim: "|", alpha_1, alpha_2; beta_1, beta_2) e_3 =$
-  $= mat(delim: "|", e_1, e_2, e_3; alpha_1, alpha_2, alpha_3; beta_1, beta_2, beta_3)$.
+  $ mat(delim: "|", e_1, e_2, e_3; alpha_1, alpha_2, alpha_3; beta_1, beta_2, beta_3)$.
 ]
 
 #corollary(title: "1")[
