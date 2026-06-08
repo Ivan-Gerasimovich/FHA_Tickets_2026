@@ -23,7 +23,7 @@ jobs:
       - name: Compile PDF
         run: |
           mkdir -p result
-          typst compile --root . FHA/Typst/typ/main.typ result/fha.pdf
+          typst compile FHA/Tickets/typ/main.typ result/FHA.pdf
 
       # 3. Сохраняем результат
       # Этот шаг выполняется уже на хосте, поэтому используем обычный экшен
@@ -31,4 +31,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: fha-notes
-          path: result/fha.pdf
+          path: result/FHA.pdf
