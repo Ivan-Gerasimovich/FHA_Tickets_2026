@@ -32,13 +32,13 @@
 // ============================================
 // Создание блоков — каждый со своим независимым счётчиком и цветом
 // ============================================
-#let theorem    = make-block("Теорема",     rgb("#006400"))
-#let definition = make-block("Определение", rgb("#2e7d32"))
-#let lemma      = make-block("Лемма",       rgb("#1565c0"))
-#let corollary  = make-block("Следствие",   rgb("#e65100"))
+#let theorem    = make-block("Теорема",     rgb("#048804"))
+#let definition = make-block("Определение", rgb("#e0e018"))
+#let lemma      = make-block("Лемма",       rgb("#a011d4"))
+#let corollary  = make-block("Следствие",   rgb("#e63a00"))
 #let remark     = make-block("Замечание",   rgb("#6a1b9a"))
 #let axiom      = make-block("Аксиома",     rgb("#1565c0"))
-#let property   = make-block("Свойство",    rgb("#00695c"))
+#let property   = make-block("Свойство",    rgb("#0499d8"))
 #let formula    = make-block("",            rgb("#c500fb"), counter-name: "Формула")
 #let circled(body) = {
   box(circle(radius: 10pt, stroke: 1pt + black, inset: 0pt)[

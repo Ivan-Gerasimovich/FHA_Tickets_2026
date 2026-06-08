@@ -45,7 +45,7 @@
 
 #corollary[
   Для любых ненулевых векторов $x in V, y in V$
-  $ -1 <= (x, y) / (|x| dot |y|) <= 1. $
+  $ -1 <= ((x, y)) / (|x| dot |y|) <= 1. $
 ]
 
 #proof[
@@ -63,7 +63,7 @@
 
 #definition[
   *Углом* между ненулевыми векторами $x in V, y in V$ наз-ся число $phi in [0; pi]$ такое, что:
-  *$ cos phi = (x, y) / (|x| dot |y|) $*
+  *$ cos phi = ((x, y)) / (|x| dot |y|) $*
 ]
 
 #definition[

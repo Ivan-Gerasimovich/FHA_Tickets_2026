@@ -81,7 +81,7 @@
   $ alpha_1 lambda_1 x_1 + alpha_2 lambda_2 x_2 + ... + alpha_n lambda_n x_n = 0_V "    " (2) $ <eq-ind-2>
 
 
-Вычтем из уравнения (2) уравнение (1), умноженное на $lambda_n:$
+Вычтем из уравнения (2) уравнение (1), *умноженное на $lambda_n:$*
 $ underbrace(alpha_1(lambda_1 - lambda_n), 0) x_1 + underbrace(alpha_2(lambda_2 - lambda_n), 0) x_2 + dots + underbrace(alpha_(n-1)(lambda_(n-1) - lambda_n), 0) x_(n-1) = 0_V $ <eq-ind-3>
 
 

@@ -2,14 +2,9 @@
 
 = Линейная оболочка векторов и её базис.
 
-\
-// TODO: удалить 1-ю часть ?? 
-Пусть $e_1$ — ненулевой вектор пр-ва $V$. Тогда множество векторов вида $\{alpha_1 e_1 in V: alpha_1 in P\}$ — одномерное подпространство пространства $V$.
-
-Пусть $e_1, e_2$ — линейно независ. вектора пространства $V$.  \ Тогда $\{alpha_1 e_1 + alpha_2 e_2 in V: alpha_1 in P, alpha_2 in P\}$ — двумерное подпространство пр-ва $V$.
 
 #definition[
-  Пусть $x_1, x_2, ..., x_k$ — некоторые векторы пр-ва $V$. *Линейной оболочкой* векторов $x_1, x_2, ..., x_k$ наз-ся множество векторов $op("lin")(\{x_1, x_2, ..., x_k\})$ — множество всевозможных линейных комбинаций вида \ $alpha_1 x_1 + alpha_2 x_2 + ... + alpha_k x_k in V$; $alpha_i in P; i = 1, ..., k$.
+  Пусть $x_1, x_2, ..., x_k$ — некоторые векторы пр-ва $V$. *Линейной оболочкой* векторов $x_1, x_2, ..., x_k$ наз-ся множество векторов $op("lin")(\{x_1, x_2, ..., x_k\})$ — множество всевозможных линейных комбинаций вида \ {$alpha_1 x_1 + alpha_2 x_2 + ... + alpha_k x_k in V$; $alpha_i in P; i = 1, ..., k}$.
 ]
 
 #lemma[
@@ -20,8 +15,8 @@
   1) Пусть $x in op("lin")(\{x_1, x_2, ..., x_k\}) -> x = lambda_1 x_1 + lambda_2 x_2 + ... + lambda_k x_k$. \
   $y in op("lin")(\{x_1, x_2, ..., x_k\}) -> y = mu_1 x_1 + mu_2 x_2 + ... + mu_k x_k$.
 
-  $x + y = (lambda_1 + mu_1)x_1 + (lambda_2 + mu_2)x_2 + ... + (lambda_k + mu_k)x_k$ (т.к. она содержит все возможные лин. комб.) \
-  $=> x + y in op("lin")(\{x_1, x_2, ..., x_k\})$.
+  $x + y = (lambda_1 + mu_1)x_1 + (lambda_2 + mu_2)x_2 + ... + (lambda_k + mu_k)x_k$ \
+  $=> x + y in op("lin")(\{x_1, x_2, ..., x_k\})$.  (т.к. она содержит все возможные лин. комб.)
 
   2) $lambda in P$. Док-ть $lambda x in op("lin"({x_1, x_2, ..., x_k}))$. \
   $lambda x = (lambda lambda_1) x_1 + (lambda lambda_2) x_2 + ... + (lambda lambda_k) x_k => lambda x in op("lin")(\{x_1, x_2, ..., x_k\})$
@@ -43,8 +38,7 @@
   Тогда $x = lambda_1 x_1 + lambda_2 x_2 + ... + lambda_l x_l + lambda_(l+1) x_(l+1) + lambda_(l+2) x_(l+2) + ... + lambda_k x_k$. 
   // В оригинале слагаемые x_{l+1}, x_{l+2}, ..., x_k обведены в рамку, чтобы показать подстановку в следующем шаге.
 
-  $ x = lambda_1 x_1 + lambda_2 x_2 + ... + lambda_l x_l + lambda_(l+1) sum_(j=1)^l alpha_((l+1)j) x_j + lambda_(l+2) sum_(j=1)^l alpha_((l+2)j) x_j + ... + lambda_k sum_(j=1)^l alpha_(k,j) x_j $
-  (сгруппируем по $x_j$) \
+  $ x = lambda_1 x_1 + lambda_2 x_2 + ... + lambda_l x_l + lambda_(l+1) sum_(j=1)^l alpha_((l+1)j) x_j + lambda_(l+2) sum_(j=1)^l alpha_((l+2)j) x_j + ... + lambda_k sum_(j=1)^l alpha_(k,j) x_j $ 
   — ЛИНЕЙНАЯ комбинация $x_1, x_2, ..., x_l$.
 
   [доказали, что $forall$ вектор линейно выраж. через первые $l$ векторов]

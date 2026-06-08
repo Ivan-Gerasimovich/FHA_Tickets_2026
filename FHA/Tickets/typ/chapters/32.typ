@@ -2,7 +2,7 @@
 
 = Матрица линейного оператора в базисе
 
-Пусть $V$ — линейное пространство над полем $P$, $e_1, e_2, dots, e_n$ — базис пространства $V$, а $f: V -> V$ — линейный оператор.
+Пусть $V$ — линейное пространство над полем $P$,\ $e_1, e_2, dots, e_n$ — базис пространства $V$, \ $f: V -> V$ — линейный оператор.
 
 Тогда $f(e_1), f(e_2), dots, f(e_n)$ — векторы пространства $V$. \ Разложим их по базису:
 
@@ -17,18 +17,19 @@ $
 
 
   Матрица
-  $ A = mat(
+ #set align(center)
+#rect(stroke: 1.5pt + rgb("#f5d30f"), inset: 10pt)[
+$ A = mat(
     delim: "(",
     a_(1 1), a_(1 2), dots, a_(1 n);
     a_(2 1), a_(2 2), dots, a_(2 n);
     dots.v, dots.v, dots.down, dots.v;
     a_(n 1), a_(n 2), dots, a_(n n)
-  ) $
-  называется *матрицей линейного оператора $f$* в базисе $e_1, e_2, dots, e_n$.
-
-
-
-
+  ) $]
+#set align(left)
+  называется *матрицей линейного оператора $f$* в базисе $e_1, e_2, dots, e_n$. \
+  \
+  
 Пусть $x in V$. Тогда (разложение по базису):
 $ x = alpha_1 e_1 + alpha_2 e_2 + dots + alpha_n e_n, quad alpha = (alpha_1, alpha_2, dots, alpha_n)^T - "коорд. вект. " x $
 
@@ -57,4 +58,7 @@ $f(x) = f(alpha_1 e_1 + alpha_2 e_2 + dots + alpha_n e_n)
 #set align(left)
 
 В матричном виде связь координат записывается как:
-$ beta = A dot alpha $
+#set align(center)
+#rect(stroke: 1.5pt + rgb("2196F3"), inset: 10pt)[
+$ beta = A dot alpha $]
+#set align(left)
