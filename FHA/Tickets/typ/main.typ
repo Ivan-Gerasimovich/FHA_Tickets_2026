@@ -3,7 +3,7 @@
 #show: setup 
 
 #align(center)[
-  #text(20pt, weight: "bold")[Вопросы по ОВА (II семестр)]
+  #text(10pt, weight: "bold")[Вопросы по ОВА (II семестр)]
   #v(1em)
 ]
 
