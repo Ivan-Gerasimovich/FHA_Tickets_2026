@@ -13,7 +13,7 @@
   $2^circle.$ $forall lambda in RR quad forall x in V quad forall y in V quad (lambda x, y) = lambda(x, y)$
   
   $3^circle.$ $forall x in V quad forall y in V quad forall z in V quad (x+y, z) = (x, z) + (y, z)$ \
-  *(свойство линейности по 1-му аргументу для п. 2 и 3)*
+
   
   $4^circle.$ $forall x in V quad (x, x) >= 0 and [(x, x) = 0 <=> x = 0_V]$
 ]
@@ -52,7 +52,7 @@
   1) $(x, y) <= |x| dot |y| quad | : (overbrace(|x|, >= 0) dot overbrace(|y|, >=0))$ \
      $ (x, y) / (|x| dot |y|) <= 1. $
 
-  2) $(-x, y) <= underbrace(|-x|, "док-ть! " |x|) dot |y| $ \
+  2) $(-x, y) <= |-x| dot |y| $ \
 
      $-1 dot (x, y) <= |x| dot |y| quad | : underbrace((-|x| dot |y|), < 0) $
      $ (x, y) / (|x| dot |y|) >= -1 $

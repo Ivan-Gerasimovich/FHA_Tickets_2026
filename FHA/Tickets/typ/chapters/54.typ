@@ -3,19 +3,19 @@
 = Порядок элемента в группе. Подгруппа $chevron.l X chevron.r$ группы $G$, порождённая множеством $X$ элементов группы $G$. Порождающее множество группы. Циклическая группа.
 
 Пусть $G$ — группа с операцией умножения.
-Пусть $a$ — элемент группы $G$. Для произвольного целого числа $n$ положением:
+Пусть $a$ — элемент группы $G$. Для произвольного целого числа $n$ положим:
 
 $ a^n = cases(
-  1, &"если " n = 0,
-  underbrace(a dot.c a dot.c dots.c dot.c a, n), &"если " n > 0,
-  (underbrace(a dot.c a dot.c dots.c dot.c a, |n|))^(-1), &"если " n < 0.
+  1 "," &"если " n = 0,
+  underbrace(a dot.c a dot.c dots.c dot.c a, n) "," &"если " n > 0,
+  (underbrace(a dot.c a dot.c dots.c dot.c a, |n|))^(-1) "," &"если " n < 0.
 ) $
 
-Нетрудно установить следующее соотношение для степеней элемента $a in G$:
+Установим следующее соотношение для степеней элемента $a in G$:
 
-Для степеней элемента $a in G$:
 
-$ forall n in ZZ quad forall m in ZZ quad a^(n+m) = a^n dot.c a^m, quad (a^n)^m = a^(n m). $
+
+*$ forall n in ZZ quad forall m in ZZ quad a^(n+m) = a^n dot.c a^m, quad (a^n)^m = a^(n m). $*
 
 #definition[
   *Порядком элемента* $a$ группы $G$ называется наименьшее натуральное число $n$ такое, что $a^n = e$. \
@@ -25,7 +25,7 @@ $ forall n in ZZ quad forall m in ZZ quad a^(n+m) = a^n dot.c a^m, quad (a^n)^m 
   $ "ord"(a) = min \{ n in NN : a^n = e \}. $
 ]
 
-Рассмотрим группу $(ZZ_n, +)$ классов вычетов по модулю $n$ относительно сложения. \
+- Рассмотрим группу $(ZZ_n, +)$ классов вычетов по модулю $n$ относительно сложения. \
 Порядок класса $overline(1)$ равен $n$:
 
 $ "ord"(overline(1)) = n. $
@@ -34,8 +34,8 @@ $ "ord"(overline(1)) = n. $
 
 $ overline(1) = overline(1), $
 $ overline(1) + overline(1) = overline(2), $
-$ overline(1) + overline(1) + overline(1) = overline(3), $
-$ dots.c , $
+
+$ dots.c  $
 $ underbrace(overline(1) + overline(1) + dots.c + overline(1), n-1) = overline(n-1), $
 $ underbrace(overline(1) + overline(1) + dots.c + overline(1) + overline(1), n) = overline(n) = overline(0). $
 
