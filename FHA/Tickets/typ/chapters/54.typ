@@ -55,7 +55,7 @@ $ underbrace(overline(1) + overline(1) + dots.c + overline(1) + overline(1), n) 
   где $H <= G$ обозначает тот факт, что $H$ — подгруппа группы $G$.
 ]
 
-#property[
+#remark[
   Подгруппа $chevron.l X chevron.r$ группы $G$, порождённая множеством $X$, — *наименьшая подгруппа* группы $G$, содержащая множество элементов $X$.
 ]
 
