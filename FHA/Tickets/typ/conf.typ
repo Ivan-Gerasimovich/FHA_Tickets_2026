@@ -32,13 +32,13 @@
 // ============================================
 // Создание блоков — каждый со своим независимым счётчиком и цветом
 // ============================================
-#let theorem    = make-block("Теорема",     rgb("#006400"))
-#let definition = make-block("Определение", rgb("#2e7d32"))
+#let theorem    = make-block("Теорема",     rgb("#1b5e20")) // Темно-зеленый (хвойный)
+#let definition = make-block("Определение", rgb("#689f38")) // Светло-зеленый (оливковый)
 #let lemma      = make-block("Лемма",       rgb("#1565c0"))
 #let corollary  = make-block("Следствие",   rgb("#e65100"))
 #let remark     = make-block("Замечание",   rgb("#6a1b9a"))
 #let axiom      = make-block("Аксиома",     rgb("#1565c0"))
-#let property   = make-block("Свойство",    rgb("#00695c"))
+#let property   = make-block("Свойство",    rgb("#00838f")) // Бирюзовый (морская волна)
 #let formula    = make-block("",            rgb("#c500fb"), counter-name: "Формула")
 #let circled(body) = {
   box(circle(radius: 5pt, stroke: 1pt + black, inset: 0pt)[
@@ -135,7 +135,7 @@
   // -- 3. ПОДЗАГОЛОВКИ (H2) --
   show heading.where(level: 2): it => {
     v(0.6em, weak: true) 
-    text(fill: rgb("#2a4b7c"), weight: "bold", size: 0.75em)[#it.body] 
+    text(fill: rgb("#2a4b7c"), weight: "bold", size: 0.85em)[#it.body] 
     v(0.3em, weak: true)
   }
 
