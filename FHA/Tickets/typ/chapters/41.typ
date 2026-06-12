@@ -10,7 +10,16 @@
      $ (a + b) c = a c + b c $
 ]
 
+#definition[
+  Пусть $K$ - кольцо. \
+  $a in K, b in K$ называются *делителями нуля*, если: $" "$
+  $a != 0, b != 0, a dot b = 0$
+]
+
+- В любом поле нет делителей нуля
+
 == Поле классов вычетов $ZZ_2$
+$(ZZ_2, +, *) - "поле классов вычетов"$  \
 
 $ZZ_2 = {overline(0), overline(1)}$
 
@@ -24,7 +33,7 @@ $ => ZZ_2$ — поле.
 \
 $(ZZ_4 = {overline(0), overline(1), overline(2), overline(3)}, +, dot)$ — кольцо классов вычетов по модулю 4.
 
-$ underbrace(overline(2), != 0)) dot underbrace(overline(2), != 0) = overline(4) = overline(0) $
+$ underbrace(overline(2), != 0) dot underbrace(overline(2), != 0) = overline(4) = overline(0) $
 
 $overline(2) != overline(0)$ и $overline(2) != overline(0)$ $=>$ $overline(2)$ и $overline(2)$ — делители нуля $=>$ *$(ZZ_4, +, dot)$ не поле*.
 

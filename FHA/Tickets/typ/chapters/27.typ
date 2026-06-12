@@ -19,9 +19,9 @@
   Пусть $f_1, f_2, dots, f_n$ — базис пр-ва $V$. \
   При помощи ортогонализации построим векторы $e_1, e_2, dots, e_n$ — попарно ортогональные, ненулевые. \
   Покажем, что $e_1, e_2, dots, e_n$ — линейно независимые векторы. \
-  Рассмотрим $ underbrace((lambda_1), 0) e_1 + lambda_2 e_2 + dots + lambda_n e_n = O_V quad | dot e_1$
+  Рассмотрим $ underbrace((lambda_1), 0) e_1 + underbrace(lambda_2, =0) e_2 + dots + underbrace(lambda_n, =0) e_n = O_V quad | dot e_1$
   
-  $ lambda_1 underbrace((e_1, e_1), != 0 "," >0) + lambda_2 underbrace((e_2, e_1), = 0) + dots + lambda_s underbrace((e_n, e_1), =0) = underbrace((O_V, e_s), 0) $
+  $ lambda_1 underbrace((e_1, e_1), != 0 "," >0) + lambda_2 underbrace((e_2, e_1), = 0) + dots + lambda_n underbrace((e_n, e_1), =0) = underbrace((O_V, e_1), 0) $
 
   Заметим, что:
   - $(e_i, e_s) = 0$ при $i != s$ (в силу попарной ортогональности);

@@ -48,5 +48,5 @@
   При этом $k$ и $l$ — натуральные числа, $k, l in {0, 1, dots, n-1} =>$ \
   $ k = l =>  "противоречие с "  k != l$.
 
-  Найдется $overline(a) dot overline(b) = overline(1) => overline(b)$ — обратный элемент, к $a$: $"  "$*$overline(b) = (a)^(-1)$*.
+  Найдется $overline(a) dot overline(b) = overline(1) => overline(b)$ — обратный элемент, к $a$: $"  "$*$b = (a)^(-1)$*.
 ]

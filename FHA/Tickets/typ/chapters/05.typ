@@ -56,7 +56,8 @@
 ]
 
 #theorem(title: "О выражении смешанного произв. через коорд. векторов в ортонорм. базе")[
-  Пусть $(e_1, e_2, e_3)$ — ортонормированный базис. 
+  Пусть $(e_1, e_2, e_3)$ — *правый ортонормированный* базис. \
+  
   $a = vec(alpha_1, alpha_2, alpha_3)^T$, $b = vec(beta_1, beta_2, beta_3)^T$, $c = vec(gamma_1, gamma_2, gamma_3)^T$ — координаты векторов.
   Тогда:
   $(a, b, c) = mat(delim: "|", alpha_1, alpha_2, alpha_3; beta_1, beta_2, beta_3; gamma_1, gamma_2, gamma_3)$

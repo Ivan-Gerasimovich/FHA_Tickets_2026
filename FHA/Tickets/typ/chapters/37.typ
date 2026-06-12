@@ -37,7 +37,7 @@
 
 #proof[
   Пусть $f$ — изометрический оператор.
-  $ angle(x, y) = phi => cos phi = (x, y) / (|x| |y|) $
+  $ angle(x"; "y) = phi => cos phi = ((x, y)) / (|x| |y|) $
   $ angle(f(x), f(y)) = phi' => cos phi' = ((f(x), f(y))) / (|f(x)| |f(y)|) = ((x, y)) / (|x|dot|y|) = cos phi $
 ]
 
