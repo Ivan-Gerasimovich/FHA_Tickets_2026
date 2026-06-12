@@ -50,12 +50,12 @@
 
 #proof[
   1) $(x, y) <= |x| dot |y| quad | : (overbrace(|x|, >= 0) dot overbrace(|y|, >=0))$ \
-     $ (x, y) / (|x| dot |y|) <= 1. $
+     $ ((x, y)) / (|x| dot |y|) <= 1. $
 
   2) $(-x, y) <= |-x| dot |y| $ \
 
      $-1 dot (x, y) <= |x| dot |y| quad | : underbrace((-|x| dot |y|), < 0) $
-     $ (x, y) / (|x| dot |y|) >= -1 $
+     $ ((x, y)) / (|x| dot |y|) >= -1 $
 ]
 
 // TODo: доказать |-x|

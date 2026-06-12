@@ -118,7 +118,7 @@ $ (x'' / a - i dot y'' / b) dot (x'' / a + i dot y'' / b) = 0 $
 ]
 
 #definition[
-  Прямые $d_1 " и " d_2$ с уравнениями $x plus.minus a / epsilon = 0$ — *директрисы эллипса*.
+  Прямые *$d_1$: $x - a / epsilon = 0 " и "  d_2$: $x + a / epsilon = 0$*  — *директрисы эллипса*.
 ]
 
 #formula()[

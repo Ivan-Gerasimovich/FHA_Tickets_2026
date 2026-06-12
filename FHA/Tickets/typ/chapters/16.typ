@@ -61,7 +61,7 @@ $ lambda in P, a in V -> lambda a in V $
 
 #proof[
   $ alpha dot 0_V = alpha(overbrace(a, 1 dot a) + overbrace((-a), (-1) dot a)) = alpha (1 dot a + (-1) dot a) = alpha((1 + (-1)) dot a) = \ 
-  = alpha(underbrace(0, beta) dot a) limits(=)^"акс. 3" [alpha * (beta  a) = (alpha beta) * a] = 0 dot a = 0_V $
+  = alpha(underbrace(0, beta) dot a) limits(=)^"акс. 3" [alpha dot (beta  a) = (alpha beta) dot a] = 0 dot a = 0_V $
 ]
 
 #property[
