@@ -25,10 +25,40 @@ jobs:
           mkdir -p result
           typst compile FHA/Tickets/typ/main.typ result/FHA.pdf
 
-      # 3. Сохраняем результат
-      # Этот шаг выполняется уже на хосте, поэтому используем обычный экшен
+      # 3. Сохраняем результат в артефакты GitHub Actions
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: FHA
           path: result/FHA.pdf
+
+  # Новая задача для публикации в Релизы.
+  # Она запускается только при успешной компиляции и только при пуше в main.
+  release:
+    needs: compile
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    permissions:
+      contents: write # Позволяет создавать релизы и изменять их файлы
+
+    steps:
+      # 1. Скачиваем собранный ранее PDF из артефактов
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: FHA
+          path: result # Скачает файл в папку result
+
+      # 2. Создаем релиз и загружаем файл с помощью GitHub CLI (gh)
+      - name: Upload PDF to Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Пытаемся создать релиз "latest" (если уже создан — команда просто завершится)
+          gh release create latest \
+            --title "Последняя сборка" \
+            --notes "Автоматически собранный PDF-файл билетов. Обновлено: $(date +'%Y-%m-%d %H:%M')" \
+            --prerelease || true
+
+          # Загружаем PDF в этот релиз. Флаг --clobber перезаписывает старый файл новым.
+          gh release upload latest result/FHA.pdf#FHA.pdf --clobber
