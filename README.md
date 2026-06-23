@@ -52,7 +52,7 @@ git checkout <название_ветки>
 
 Вы можете скачать готовый документ по прямой ссылке:
 
-👉 **[Скачать актуальную версию PDF (FHA.pdf)](https://github.com/Ivan-Gerasimovich/FHA_Tickets_2026/releases/latest/download/FHA.pdf)**
+👉 **[Скачать актуальную версию PDF (FHA.pdf)](https://github.com/Ivan-Gerasimovich/FHA_Tickets_2026/releases/download/latest/FHA.pdf)**
 
 ---
 
